@@ -14,7 +14,7 @@ const Navbar = () => {
 
         {/* Logo */}
         <a href="/" className="logo">
-          <img src="/public/smp_lgo-removebg-preview.png" alt="Logo SMP Plus" className="logo-img" />
+          <img src="/smp_lgo-removebg-preview.png" alt="Logo SMP Plus" className="logo-img" />
 
           <div className="logo-text">
             <span className="logo-title">SMP Plus</span>
