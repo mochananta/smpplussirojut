@@ -21,7 +21,7 @@ export default function Footer() {
           <div className="footer-brand">
             <a href="#" className="logo logo-light">
               <img
-                src="../../public/Removal-170.png"
+                src="/public/Removal-170.png"
                 alt="Logo SMP Plus Sirojut Tholibien"
                 className="logo-img"
               />
