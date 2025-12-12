@@ -86,7 +86,7 @@ export default function Footer() {
 
             <div className="footer-contact-item">
               <Mail size={18} />
-              <span>info@smpplus-sirojuttholibien.sch.id</span>
+              <span>smpplussirojuttholibien@gmail.com</span>
             </div>
           </div>
         </div>

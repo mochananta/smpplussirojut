@@ -83,7 +83,7 @@ export default function Contact({ onSubmit }) {
                 </div>
                 <div>
                   <h4>Email</h4>
-                  <p>info@smpplus-sirojuttholibien.sch.id</p>
+                  <p>smpplussirojuttholibien@gmail.com</p>
                 </div>
               </div>
 

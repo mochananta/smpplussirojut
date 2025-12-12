@@ -42,7 +42,6 @@ const Navbar = () => {
             </div>
           </div>
 
-          <a href="#program" className="nav-link">Program</a>
           <a href="#fasilitas" className="nav-link">Fasilitas</a>
           <a href="#berita" className="nav-link">Berita</a>
           <a href="#kontak" className="nav-link">Kontak</a>
@@ -84,7 +83,6 @@ const Navbar = () => {
             <a href="/struktur" className="mobile-sub-link">Struktur Organisasi</a>
           </details>
 
-          <a onClick={handleLinkClick} href="#program" className="mobile-nav-link">Program</a>
           <a onClick={handleLinkClick} href="#fasilitas" className="mobile-nav-link">Fasilitas</a>
           <a onClick={handleLinkClick} href="#berita" className="mobile-nav-link">Berita</a>
           <a onClick={handleLinkClick} href="#kontak" className="mobile-nav-link">Kontak</a>

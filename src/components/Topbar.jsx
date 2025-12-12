@@ -5,7 +5,7 @@ export default function Topbar() {
     <div className="topbar">
       <div className="container topbar-container">
         <div className="topbar-left">
-          <span><Mail size={16} /> info@smpplus.com</span>
+          <span><Mail size={16} /> smpplussirojuttholibien@gmail.com</span>
           <span><Phone size={16} /> 0812-3456-7890</span>
         </div>
 
