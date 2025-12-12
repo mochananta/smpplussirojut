@@ -17,7 +17,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
 
-          {/* Brand */}
+          {/* footer brand */}
           <div className="footer-brand">
             <a href="#" className="logo logo-light">
               <img
