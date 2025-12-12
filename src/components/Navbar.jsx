@@ -13,10 +13,9 @@ const Navbar = () => {
       <div className="container navbar-container">
 
         {/* Logo */}
-        <a href="#" className="logo">
-          <div className="logo-icon">
-            <i data-lucide="graduation-cap"></i>
-          </div>
+        <a href="/" className="logo">
+          <img src="../../public/smp_lgo-removebg-preview.png" alt="Logo SMP Plus" className="logo-img" />
+
           <div className="logo-text">
             <span className="logo-title">SMP Plus</span>
             <span className="logo-subtitle">Sirojut Tholibien</span>
@@ -62,14 +61,27 @@ const Navbar = () => {
       {/* Mobile Dropdown */}
       <div className={`mobile-menu ${open ? "active" : ""}`}>
         <nav className="mobile-nav">
-          <a onClick={handleLinkClick} href="#beranda" className="mobile-nav-link">Beranda</a>
+          <a onClick={handleLinkClick} href="/" className="mobile-nav-link">Beranda</a>
 
-          {/* Dropdown untuk mobile (opsional) */}
+          {/* Mobile Dropdown */}
           <details className="mobile-dropdown">
-            <summary className="mobile-nav-link">Tentang</summary>
-            <a href="#profil" className="mobile-sub-link">Profil Sekolah</a>
-            <a href="#visi-misi" className="mobile-sub-link">Visi & Misi</a>
-            <a href="#struktur" className="mobile-sub-link">Struktur Organisasi</a>
+            <summary className="mobile-nav-link">
+              Tentang
+              <svg
+                className="dropdown-icon"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+            </summary>
+
+            <a href="/profil" className="mobile-sub-link">Profil Sekolah</a>
+            <a href="/struktur" className="mobile-sub-link">Struktur Organisasi</a>
           </details>
 
           <a onClick={handleLinkClick} href="#program" className="mobile-nav-link">Program</a>

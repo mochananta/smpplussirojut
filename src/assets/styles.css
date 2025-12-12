@@ -304,28 +304,24 @@ img {
   height: 4.5rem;
 }
 
+/* Logo Wrapper */
 .logo {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  text-decoration: none;
 }
 
-.logo-icon {
+/* Logo Image */
+.logo-img {
   width: 2.5rem;
+  /* 40px — sama seperti ukuran kotak icon sebelumnya */
   height: 2.5rem;
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-  border-radius: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+  object-fit: contain;
+  border-radius: 0.4rem;
 }
 
-.logo-icon svg {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
+/* Text */
 .logo-text {
   display: flex;
   flex-direction: column;
@@ -459,20 +455,74 @@ img {
   color: var(--primary);
 }
 
-/* Mobile dropdown */
+.mobile-dropdown {
+  width: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+/* Summary (header dropdown) */
 .mobile-dropdown summary {
   cursor: pointer;
+  list-style: none;
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  color: #333;
+  align-items: center;
+  border-radius: var(--radius);
+  transition: background 0.2s ease;
 }
 
+/* Hover */
+.mobile-dropdown summary:hover {
+  background: var(--muted);
+}
+
+/* Arrow remove */
+.mobile-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Submenu wrapper (animated) */
+.mobile-submenu {
+  max-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: max-height 0.3s ease;
+}
+
+/* When opened */
+.mobile-dropdown[open] .mobile-submenu {
+  max-height: 200px;
+  /* cukup untuk 3–5 link */
+}
+
+
+/* Submenu item */
 .mobile-sub-link {
   display: block;
-  padding: 0.5rem 1.5rem;
-  font-size: 0.85rem;
+  padding: 0.55rem 1.5rem;
+  font-size: 0.86rem;
   color: #444;
+  border-left: 3px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
+/* Hover */
 .mobile-sub-link:hover {
   color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* Dropdown icon */
+.dropdown-icon {
+  transition: transform 0.25s ease;
+}
+
+/* Saat <details> terbuka → icon rotate */
+.mobile-dropdown[open] .dropdown-icon {
+  transform: rotate(180deg);
 }
 
 .mobile-menu-btn {
@@ -599,6 +649,27 @@ img {
   transform: translateY(6px);
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero-badge {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.85rem;
+    border-radius: 24px;
+    gap: 0.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .hero-badge {
+    padding: 0.38rem 0.75rem;
+    font-size: 0.78rem;
+    border-radius: 20px;
+    gap: 0.4rem;
+    margin: 0;
+  }
+}
+
 /* Animasi masuk lembut */
 @keyframes fadeSlide {
   to {
@@ -637,6 +708,36 @@ img {
   display: flex;
   gap: 1rem;
   margin-bottom: 2rem;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero-buttons {
+    gap: 0.75rem;
+    margin-bottom: 1.75rem;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.65rem;
+    width: 100%;
+  }
+
+  .hero-buttons a,
+  .hero-buttons button {
+    width: 100%;
+    /* tombol melebar rapi full width */
+    text-align: center;
+    /* teks center */
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
 }
 
 .btn-gold,
@@ -732,11 +833,6 @@ img {
   .hero-grid {
     grid-template-columns: 1fr;
     text-align: center;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-    flex-direction: column;
   }
 
   .hero-image img {
@@ -1521,6 +1617,45 @@ img {
   background-size: 80px 80px;
 }
 
+.footer-mosque {
+  position: absolute;
+  bottom: -125px;
+  left: 27%;
+  width: 105%;
+  height: 118%;
+  transform: translateX(-50%);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: contain;
+  opacity: 0.50;
+  filter: brightness(0.6) contrast(1.8);
+  pointer-events: none;
+  z-index: 2;
+  background-image: url("/mosque.png");
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .footer-mosque {
+    bottom: -110px;
+    left: 33%;
+    width: 120%;
+    height: 110%;
+    opacity: 0.45;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .footer-mosque {
+    bottom: -80px;
+    left: 50%;
+    width: 150%;
+    height: 90%;
+    opacity: 0.40;
+  }
+}
+
 .footer .container {
   position: relative;
   z-index: 10;
@@ -1896,7 +2031,7 @@ img {
   background: white;
   padding: 1.8rem 2rem;
   border-radius: 16px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
   min-width: 230px;
   text-align: center;
   border: 2px solid var(--primary-dark);
@@ -1905,7 +2040,7 @@ img {
 
 .org-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 35px rgba(0,0,0,0.12);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.12);
 }
 
 .org-card h3 {
@@ -1956,6 +2091,7 @@ img {
   .org-level.multi {
     flex-direction: column;
   }
+
   .line-horizontal {
     width: 40%;
   }

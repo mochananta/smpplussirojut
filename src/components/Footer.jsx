@@ -13,15 +13,18 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-pattern"></div>
+      <div className="footer-mosque"></div>
       <div className="container">
         <div className="footer-grid">
 
           {/* Brand */}
           <div className="footer-brand">
             <a href="#" className="logo logo-light">
-              <div className="logo-icon">
-                <GraduationCap size={20} />
-              </div>
+              <img
+                src="../../public/Removal-170.png"
+                alt="Logo SMP Plus Sirojut Tholibien"
+                className="logo-img"
+              />
               <div className="logo-text">
                 <span className="logo-title">SMP Plus</span>
                 <span className="logo-subtitle">Sirojut Tholibien</span>
